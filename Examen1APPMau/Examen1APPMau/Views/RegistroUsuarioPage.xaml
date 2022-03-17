@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Examen1APPMau.Views.RegistroUsuarioPage"
+             BackgroundImageSource="registrobg.jpg"
+             NavigationPage.HasNavigationBar="False"
+             
+             >
+    
+    <ContentPage.Content>
+
+        <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
+
+            <FlexLayout Padding="105,0,10,10">
+
+                <Image Source="icon2.png" VerticalOptions="Center" IsVisible="true" HeightRequest="170" WidthRequest="170"/>
+
+            </FlexLayout>
+            <Entry x:Name="TxtName" HorizontalTextAlignment="Center" Placeholder="Nombre Activo" TextTransform="Lowercase" PlaceholderColor="White" FontSize="Large" TextColor="White"/>
+            <Entry x:Name="TxtNumerSerie" HorizontalTextAlignment="Center" Placeholder="Numero de Serie"  FontSize="Large" PlaceholderColor="White" TextColor="White"/>
+            <Entry x:Name="TxtCostoActivo" HorizontalTextAlignment="Center" Placeholder="Costo Activo" PlaceholderColor="White" FontSize="Large" TextColor="White"/>
+            <Entry x:Name="TxtDescripcion" HorizontalTextAlignment="Center" Placeholder="Descripcion" PlaceholderColor="White" FontSize="Large" TextColor="White"/>
+            <Entry x:Name="TxtUbicacion" HorizontalTextAlignment="Center" Placeholder="Ubicacion" PlaceholderColor="White" FontSize="Large" TextColor="White"/>
+            <Entry x:Name="TxtResponsable" HorizontalTextAlignment="Center" Placeholder="Responsable" PlaceholderColor="White" TextTransform="Lowercase" FontSize="Large" TextColor="White"/>
+            
+            
+            <Label  Text="Fecha de Registro" FontSize="Medium" TextColor="White" FontAttributes="Bold"/>
+
+            <DatePicker
+                MinimumDate="01/01/2022" MaximumDate="12/31/2030" TextColor="White"
+                    />
+
+            <Label  Text="Estado Activo" FontSize="Medium" TextColor="White" FontAttributes="Bold"/>
+
+            <Switch HorizontalOptions="Start" OnColor="White" ThumbColor="Aqua"/>
+
+
+            <FlexLayout>
+
+                <StackLayout Orientation="Horizontal" Padding="0,10,0,0" Spacing="20" HorizontalOptions="End">
+
+                    <Button Text="Guardar" BackgroundColor="#16F516" 
+                    WidthRequest="175" Padding="10,0,10,0" FontAttributes="Bold" FontSize="Medium"/>
+                    <Button Text="Cancelar" BackgroundColor="#EB1F62" 
+                     WidthRequest="175" Padding="10,0,10,0"
+                        Clicked="CmdVolver" FontAttributes="Bold" FontSize="Medium"/>
+
+                </StackLayout>
+
+            </FlexLayout>
+
+
+
+        </StackLayout>
+
+
+
+    </ContentPage.Content>
+</ContentPage>

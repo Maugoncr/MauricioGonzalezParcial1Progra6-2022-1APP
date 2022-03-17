@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Examen1APPMau.Views.LoginPage"
+             BackgroundImageSource="appbg.png"
+             Shell.NavBarIsVisible="False"
+             NavigationPage.HasNavigationBar="False"
+             >
+    <ContentPage.Content>
+
+        <StackLayout Padding="50,0,50,0" VerticalOptions="Center">
+
+
+            <Entry x:Name="TxtUserName" Placeholder="Correo" TextTransform="Lowercase" FontSize="Large" TextColor="White" Keyboard="Email" PlaceholderColor="White"/>
+
+            <StackLayout Orientation="Horizontal" Spacing="5" Padding="0,0,20,0" HorizontalOptions="FillAndExpand">
+
+                <Entry x:Name="TxtPassword"  WidthRequest="250" Placeholder="Contraseña" IsPassword="True" FontSize="Large" TextColor="White" PlaceholderColor="White"/>
+
+                <StackLayout>
+                    <Switch x:Name="SwSeePassword" IsToggled="False" Toggled="CmdVerContra" />
+
+                    <Label Text="Mostrar" FontSize="Micro" TextColor="White" FontAttributes="Bold"/>
+
+                </StackLayout>
+
+
+            </StackLayout>
+
+
+
+
+            <Button x:Name="BtnLogin" VerticalOptions="Center" Text="Ingresar" FontSize="Medium" CornerRadius="30" TextColor="White"
+                    BackgroundColor="#1BCBCF" BorderColor="White" BorderWidth="0.8" Padding="0,0,0,0"/>
+
+
+            <Button x:Name="BtnRegister" VerticalOptions="Center" Text="Registrar" FontSize="Medium" CornerRadius="30" BackgroundColor="#6248EB" 
+                    BorderColor="White" BorderWidth="0.8" Clicked="CmdRegistrar"/>
+
+
+
+
+
+        </StackLayout>
+
+
+
+
+    </ContentPage.Content>
+</ContentPage>
